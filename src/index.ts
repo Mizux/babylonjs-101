@@ -55,7 +55,10 @@ var ground = Mesh.CreateGround("ground1", 6, 6, 2, scene);
 // Affect a material
 ground.material = material;
 
+const fps = document.getElementById('fps')!;
+
 // Render every frame
 engine.runRenderLoop(() => {
+  fps.innerHTML = engine.getFps().toFixed() + "fps";
   scene.render();
 });

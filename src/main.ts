@@ -1,3 +1,6 @@
+// Load Style
+import './style/main.css';
+
 import {
   Engine,
   Scene,

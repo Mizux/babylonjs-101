@@ -64,10 +64,10 @@ note: `ES6 == ES2015`.
 ref: https://www.typescriptlang.org/docs/home.html 
 
 # Add Webpack
-We need to add webpack and its loaders:
+We need to add webpack and few loaders.  
+First we install webpack:
 ```sh
 npm install --save-dev webpack webpack-cli webpack-dev-server
-npm install --save-dev ts-loader css-loader style-loader file-loader
 ```
 
 We'll need to add a `webpack.config.js` to bundle our app.
@@ -77,31 +77,14 @@ const path = require('path');
 
 module.exports = {
 	devtool: 'inline-source-map',
-  entry: './src/index.ts',
+  entry: './src/main.ts',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'bundle.js'
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
-      },
-      {
-        test: /\.css$/,
-        use: ['css-loader']
-      }
-    ]
+    rules: []
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json']
@@ -125,6 +108,12 @@ Add few script to `package.json`:
 ```
 
 ## Typescript Loader
+Then you need to install typescript loader:
+```sh
+npm install --save-dev ts-loader
+```
+
+Then you need to add a new rule to `webpack.config.js`:
 ```json
 {
   test: /\.tsx?$/,
@@ -133,15 +122,47 @@ Add few script to `package.json`:
 },
 ```
 
+ref: https://www.npmjs.com/package/ts-loader#examples
+
 ## CSS Loader
-First you'll need to install `css-loader` to transform CSS to a JavaScript module.  
-Then you'll need to install `style-loader` to inject the CSS, that is exported
-by the JavaScript module, into a `<style>` tag at runtime.
+```sh
+npm install --save-dev css-loader style-loader
+```
+First you'll need to install `css-loader` to transform CSS to a JS module.  
+Then you'll need to install `style-loader` to inject the JS module
+into a `<style>` tag at runtime.
+
+You also need to add a new rule to `webpack.config.js`:
 ```json
 {
   test: /\.css$/,
-  use: ['css-loader']
+  use: ['style-loader', 'css-loader'],
 }
+```
+
+Then now in `main.ts` we can simply use:
+```ts
+import './style/main.css';
+```
+
+ref: https://github.com/seek-oss/css-modules-typescript-loader
+ref: https://github.com/Jimdo/typings-for-css-modules-loader
+
+## File Loader
+NOT TESTED YET !
+```sh
+npm install --save-dev file-loader
+```
+
+Then you need to add a new rule to `webpack.config.js`:
+```json
+{
+  test: /\.(png|jpg|gif|svg)$/,
+  loader: 'file-loader',
+  options: {
+    name: '[name].[ext]?[hash]'
+  }
+},
 ```
 
 # Add Install Babylonjs

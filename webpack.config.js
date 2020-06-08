@@ -4,8 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-	devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   devServer: {
     port: 8080,
     contentBase: ['.'],
@@ -14,7 +13,7 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true
   },
-  entry: './src/main.ts',
+  entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, './dist'),
     //publicPath: '/dist/',

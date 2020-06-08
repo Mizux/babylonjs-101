@@ -201,6 +201,26 @@ module: {
     },
 ```
 
+## Cleanup dist
+To keep dist directory clean you should use the CleanWebpackPlugin:
+```sh
+npm install --save-dev clean-webpack-plugin
+```
+
+Then in `webpack.config.js`:
+```js
+// Cleans dist folder.
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+module.exports = {
+  ...
+  plugins: [
+    new CleanWebpackPlugin(),
+  ],
+```
+
+ref: https://webpack.js.org/guides/output-management/#cleaning-up-the-dist-folder
+
 # Add Install Babylonjs
 Now, it's time to install babylonJS engine. 
 ```sh

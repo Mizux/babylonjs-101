@@ -1,5 +1,7 @@
 'use strict';
 const path = require('path');
+// Cleans dist folder.
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // creates index.html file.
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -20,6 +22,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Output Management',
     }),

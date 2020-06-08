@@ -1,5 +1,7 @@
 'use strict';
 const path = require('path');
+// creates index.html file.
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -15,9 +17,10 @@ module.exports = {
   entry: './src/main.ts',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    //publicPath: '/dist/',
     filename: 'bundle.js'
   },
+  plugins: [new HtmlWebpackPlugin()],
   module: {
     rules: [
       {

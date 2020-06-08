@@ -1,6 +1,3 @@
-// Load Style
-import './style/main.css';
-
 import {
   Engine,
   Scene,
@@ -19,8 +16,19 @@ import {
 // Required side effects to populate the Create methods on the mesh class. Without this, the bundle would be smaller but the createXXX methods from mesh would not be accessible.
 import "@babylonjs/core/Meshes/meshBuilder";
 
+// Get the fps element from the DOM.
+let fps = document.createElement('div') as HTMLDivElement;
+fps.setAttribute('id', 'fps');
+document.body.append(fps);
+
 // Get the canvas element from the DOM.
-const canvas = document.getElementById("renderCanvas") as HTMLCanvasElement;
+let canvas = document.createElement('canvas') as HTMLCanvasElement;
+canvas.setAttribute('id', 'renderCanvas');
+canvas.setAttribute('touch-action', 'none');
+document.body.append(canvas);
+
+// Load Style
+import './style/main.css';
 
 // Associate a Babylon Engine to it.
 const engine = new Engine(canvas);
@@ -47,7 +55,7 @@ light.intensity = 0.7;
 var material = new GridMaterial("grid", scene);
 
 // Our built-in 'sphere' shape. Params: name, subdivs, size, scene
-var sphere = Mesh.CreateSphere(/*name=*/"sphere1", 16, 2, scene);
+var sphere = Mesh.CreateSphere("sphere1", 16, 2, scene);
 // Move the sphere upward 1/2 its height
 sphere.position.y = 2;
 // Affect a material
@@ -57,8 +65,6 @@ sphere.material = material;
 var ground = Mesh.CreateGround("ground1", 6, 6, 2, scene);
 // Affect a material
 ground.material = material;
-
-const fps = document.getElementById('fps')!;
 
 // Render every frame
 engine.runRenderLoop(() => {

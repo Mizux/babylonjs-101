@@ -19,7 +19,11 @@ module.exports = {
     //publicPath: '/dist/',
     filename: 'bundle.js'
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+    }),
+  ],
   module: {
     rules: [
       {

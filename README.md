@@ -111,6 +111,28 @@ Add few script to `package.json`:
 
 ref: https://webpack.js.org/concepts/
 
+## Generate index.html
+To generate the `index.html` we can use the HtmlWebpackPlugin:
+```sh
+npm install --save-dev html-webpack-plugin
+```
+
+Then in `webpack.config.js`:
+```js
+// Creates index.html file.
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  ...
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+    }),
+  ],
+```
+
+ref: https://webpack.js.org/guides/output-management/#setting-up-htmlwebpackplugin
+
 ## Typescript Loader
 Then you need to install typescript loader:
 ```sh

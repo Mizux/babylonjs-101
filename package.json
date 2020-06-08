@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --progress --color"
+    "start": "webpack-dev-server --mode development --progress --color --open"
   },
   "author": "Mizux Seiha <mizux.dev@gmail.com>",
   "license": "MIT",

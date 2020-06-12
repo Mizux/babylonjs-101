@@ -75,6 +75,7 @@ We'll need to add a `webpack.config.js` to bundle our app.
 const path = require('path');
 
 module.exports = {
+  mode: 'none',
 	devtool: 'inline-source-map',
   devServer: {
     port: 8080,

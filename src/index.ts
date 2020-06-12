@@ -13,7 +13,8 @@ import {
   GridMaterial
 } from "@babylonjs/materials";
 
-// Required side effects to populate the Create methods on the mesh class. Without this, the bundle would be smaller but the createXXX methods from mesh would not be accessible.
+// Required side effects to populate the Create methods on the mesh class.
+// Without this, the bundle would be smaller but the createXXX methods from mesh would not be accessible.
 import "@babylonjs/core/Meshes/meshBuilder";
 
 // Get the fps element from the DOM.

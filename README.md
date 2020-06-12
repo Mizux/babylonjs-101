@@ -170,9 +170,9 @@ module: {
     },
 ```
 
-Then now in `main.ts` we can simply use:
+Then now in any typescript file, you can simply use:
 ```ts
-import './style/main.css';
+import 'relative/path/to/file.css';
 ```
 
 ref: https://webpack.js.org/loaders/css-loader/

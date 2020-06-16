@@ -1,3 +1,5 @@
+![CI](https://github.com/Mizux/babylonjs-101/workflows/CI/badge.svg)
+
 # Introduction
 My journey to create a javascript static site app using typescript, babylonjs and webpack.
 

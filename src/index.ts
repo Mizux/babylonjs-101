@@ -4,7 +4,6 @@ import {
   FreeCamera,
   HemisphericLight,
   Vector3,
-  Color3,
   Color4,
   Mesh
 } from "@babylonjs/core";
@@ -18,12 +17,12 @@ import {
 import "@babylonjs/core/Meshes/meshBuilder";
 
 // Get the fps element from the DOM.
-let fps = document.createElement('div') as HTMLDivElement;
+const fps = document.createElement('div') as HTMLDivElement;
 fps.setAttribute('id', 'fps');
 document.body.append(fps);
 
 // Get the canvas element from the DOM.
-let canvas = document.createElement('canvas') as HTMLCanvasElement;
+const canvas = document.createElement('canvas') as HTMLCanvasElement;
 canvas.setAttribute('id', 'renderCanvas');
 canvas.setAttribute('touch-action', 'none');
 document.body.append(canvas);

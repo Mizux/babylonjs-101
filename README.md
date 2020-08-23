@@ -3,8 +3,6 @@
 # Introduction
 My journey to create a javascript static site app using typescript, babylonjs and webpack.
 
-demo [here](https://mizux.github.io/babylonjs-101/)
-
 # Host Setup
 In your `.rc` you can add these line to have *user* global install:
 ```sh
@@ -62,7 +60,7 @@ Update Typescript config `tsconfig.json`:
 ```
 
 note: `ES6 == ES2015`.  
-ref: https://www.typescriptlang.org/docs/home.html 
+ref: https://www.typescriptlang.org/docs/home.html
 
 # Add Webpack
 We need to add webpack and few loaders.  
@@ -224,8 +222,8 @@ module.exports = {
 
 ref: https://webpack.js.org/guides/output-management/#cleaning-up-the-dist-folder
 
-# Add Install Babylonjs
-Now, it's time to install babylonJS engine. 
+# Add BabylonJS
+Now, it's time to install BabylonJS engine.
 ```sh
 npm install --save-dev @babylonjs/core @babylonjs/materials
 ```

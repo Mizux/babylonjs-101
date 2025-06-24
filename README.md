@@ -1,4 +1,7 @@
-![CI](https://github.com/Mizux/babylonjs-101/workflows/CI/badge.svg)
+Github-CI: [![Build Status][build_status]][build_link]
+
+[build_status]: ./../../actions/workflows/build.yml/badge.svg
+[build_link]: ./../../actions/workflows/build.yml
 
 # Introduction
 My journey to create a javascript static site app using typescript, babylonjs and webpack.

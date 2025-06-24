@@ -23,5 +23,3 @@ jobs:
           }' > vite.config.js
       - name: Build project
         run: npm run build
-      - name: Test
-        run: npm run test

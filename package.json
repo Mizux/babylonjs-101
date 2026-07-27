@@ -7,7 +7,7 @@
     "format": "npx prettier . --write",
     "check": "npx prettier . --check",
     "dev": "vite",
-    "build": "webpack --mode production",
+    "build": "vite build",
     "start": "webpack-dev-server --mode development --progress --color --open"
   },
   "devDependencies": {
@@ -20,6 +20,7 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.4.0",
     "typescript": "^7.0.2",
+    "vite": "^8.1.5",
     "webpack": "^5.109.0",
     "webpack-cli": "^7.0.0",
     "webpack-dev-server": "^6.0.0"

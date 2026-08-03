@@ -21,7 +21,7 @@
     "ts-loader": "^9.4.0",
     "typescript": "^7.0.2",
     "vite": "^8.2.0",
-    "webpack": "^5.109.0",
+    "webpack": "^5.109.2",
     "webpack-cli": "^7.0.0",
     "webpack-dev-server": "^6.0.0"
   }

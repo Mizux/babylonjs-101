@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@babylonjs/core": "^9.23.0",
-    "@babylonjs/materials": "^9.22.1",
+    "@babylonjs/materials": "^9.23.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.5",
     "file-loader": "^6.2.0",

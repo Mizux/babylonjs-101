@@ -11,7 +11,7 @@
     "start": "webpack-dev-server --mode development --progress --color --open"
   },
   "devDependencies": {
-    "@babylonjs/core": "^9.25.0",
+    "@babylonjs/core": "^9.26.0",
     "@babylonjs/materials": "^9.26.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.5",
@@ -20,7 +20,7 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.4.0",
     "typescript": "^7.0.2",
-    "vite": "^8.2.2",
+    "vite": "^8.3.0",
     "webpack": "^5.110.3",
     "webpack-cli": "^7.2.3",
     "webpack-dev-server": "^6.0.0"
